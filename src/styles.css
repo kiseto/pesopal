@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+    --color-self-green: #10b981;
+    --color-self-offwhite: #f2f8ff;
+    --color-self-blue: #1d4ed8;
+}
