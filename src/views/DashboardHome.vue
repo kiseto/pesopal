@@ -3,30 +3,38 @@
     <div class="max-w-7xl mx-auto">
       <div class="mb-8">
         <div class="flex flex-col">
-          <h1 class="text-4xl font-bold text-gray-900">Welcome back, User!</h1>
+          <h1 class="text-4xl font-bold text-gray-900">Welcome back, <span class="text-self-blue">User!</span></h1>
           <p class="text-lg text-gray-500">See your recent activity and money flow at a glance</p>
         </div>
       </div>
       <!-- 1st Card Row -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div class="bg-white rounded-2xl border-neutral-200 border-1 p-6 flex flex-col">
-          <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center mb-4"><span class="text-gray-500">Icon</span></div>
-          <div class="text-3xl font-bold mb-2">$12,500</div>
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <BanknotesIcon class="h-6 w-6 text-blue-600" />
+          </div>
+          <div class="text-blue-600 text-3xl font-bold mb-2">₱12,500</div>
           <div class="text-gray-600 text-md">Total Balance</div>
         </div>
         <div class="bg-white rounded-2xl border-neutral-200 border-1 p-6 flex flex-col ">
-          <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center mb-4"><span class="text-gray-500">Icon</span></div>
-          <div class="text-3xl font-bold mb-2">$2,300</div>
+          <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+            <ArrowTrendingUpIcon class="h-6 w-6 text-green-600" />
+          </div>
+          <div class="text-green-600 text-3xl font-bold mb-2">₱2,300</div>
           <div class="text-md text-gray-600">Income</div>
         </div>
         <div class="bg-white rounded-2xl border-neutral-200 border-1 p-6 flex flex-col ">
-          <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center mb-4"><span class="text-gray-500">Icon</span></div>
-          <div class="text-3xl font-bold mb-2">$1,800</div>
+          <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+            <ArrowTrendingDownIcon class="h-6 w-6 text-red-600" />
+          </div>
+          <div class="text-red-600 text-3xl font-bold mb-2">₱1,800</div>
           <div class="text-md text-gray-600">Expenses</div>
         </div>
         <div class="bg-white rounded-2xl border-neutral-200 border-1 p-6 flex flex-col ">
-          <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center mb-4"><span class="text-gray-500">Icon</span></div>
-          <div class="text-3xl font-bold mb-2">$3,400</div>
+          <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+            <BanknotesIcon class="h-6 w-6 text-purple-600" />
+          </div>
+          <div class="text-purple-600 text-3xl font-bold mb-2">₱3,400</div>
           <div class="text-md text-gray-600">Savings</div>
         </div>
       </div>
@@ -41,23 +49,26 @@
         <div class="bg-white rounded-2xl border-neutral-200 border-1 p-8 h-80 md:col-span-2 flex flex-col">
           <div class="flex items-center justify-between gap-6 mb-6 sticky top-0 bg-white z-10">
             <span class="text-xl font-bold text-neutral-800">Savings Goals</span>
-            <button class="text-green-400 cursor-pointer text-2xl">+</button>
+            <router-link to="/dashboard/budgeting" class="text-green-400 cursor-pointer">
+              <PlusIcon class="h-6 w-6" />
+            </router-link>
           </div>
           <ul class="space-y-4">
             <li class="flex justify-between items-center">
               <span class="text-gray-700 font-semibold">Vacation Fund</span>
-              <span class="text-gray-500">$1,200 / $2,000</span>
+              <span class="text-gray-500">₱1,200 / ₱2,000</span>
             </li>
             <li class="flex justify-between items-center">
               <span class="text-gray-700 font-semibold">Emergency Savings</span>
-              <span class="text-gray-500">$800 / $1,500</span>
+              <span class="text-gray-500">₱800 / ₱1,500</span>
             </li>
             <li class="flex justify-between items-center">
               <span class="text-gray-700 font-semibold">New Laptop</span>
-              <span class="text-gray-500">$400 / $1,200</span>
-            </li>
+              <span class="text-gray-500">₱400 / ₱1,200</span>
+            </li>            
           </ul>
         </div>
+       
       </div>
       <!-- 3rd Card Row -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -67,25 +78,25 @@
             <span class="text-xl font-bold text-neutral-800">Recent Transactions</span>
           </div>
           <ul class="divide-y divide-gray-200">
-            <li class="py-4 flex justify-between items-center">
-              <span class="text-gray-700">Grocery Store</span>
-              <span class="text-red-600">-$120.00</span>
-              <span class="text-gray-400 text-sm">Sep 28</span>
+            <li class="py-4 flex items-center">
+              <span class="text-gray-700 flex-1">Grocery Store</span>
+              <span class="text-red-600 w-32 text-center">-₱120.00</span>
+              <span class="text-gray-400 text-sm flex-1 text-right">Sep 28</span>
             </li>
-            <li class="py-4 flex justify-between items-center">
-              <span class="text-gray-700">Salary</span>
-              <span class="text-green-600">+$2,300.00</span>
-              <span class="text-gray-400 text-sm">Sep 27</span>
+            <li class="py-4 flex items-center">
+              <span class="text-gray-700 flex-1">Salary</span>
+              <span class="text-green-600 w-32 text-center">+₱2,300.00</span>
+              <span class="text-gray-400 text-sm flex-1 text-right">Sep 27</span>
             </li>
-            <li class="py-4 flex justify-between items-center">
-              <span class="text-gray-700">Electric Bill</span>
-              <span class="text-red-600">-$75.00</span>
-              <span class="text-gray-400 text-sm">Sep 25</span>
+            <li class="py-4 flex items-center">
+              <span class="text-gray-700 flex-1">Electric Bill</span>
+              <span class="text-red-600 w-32 text-center">-₱75.00</span>
+              <span class="text-gray-400 text-sm flex-1 text-right">Sep 25</span>
             </li>
-            <li class="py-4 flex justify-between items-center">
-              <span class="text-gray-700">Transfer from Savings</span>
-              <span class="text-green-600">+$500.00</span>
-              <span class="text-gray-400 text-sm">Sep 24</span>
+            <li class="py-4 flex items-center">
+              <span class="text-gray-700 flex-1">Transfer from Savings</span>
+              <span class="text-green-600 w-32 text-center">+₱500.00</span>
+              <span class="text-gray-400 text-sm flex-1 text-right">Sep 24</span>
             </li>
           </ul>
         </div>
@@ -96,9 +107,9 @@
             <span class="text-xl font-bold text-neutral-800">Quick Actions</span>
           </div>
           <div class="flex flex-col gap-4">
-            <button class="cursor-pointer bg-gray-600 text-white py-3 rounded-lg font-semibold transition">Add Transaction</button>
-            <button class="bg-gray-600 cursor-pointer text-white py-3 rounded-lg font-semibold transition">Create Goal</button>
-            <button class="bg-gray-600 cursor-pointer text-white py-3 rounded-lg font-semibold transition">View Reports</button>
+            <router-link to="/dashboard/transactions" class="cursor-pointer bg-blue-600 text-white py-3 rounded-lg font-semibold transition hover:bg-blue-700 text-center">Add Transaction</router-link>
+            <router-link to="/dashboard/budgeting" class="bg-green-600 cursor-pointer text-white py-3 rounded-lg font-semibold transition hover:bg-green-700 text-center">Create Goal</router-link>
+            <router-link to="/dashboard/reports" class="bg-purple-600 cursor-pointer text-white py-3 rounded-lg font-semibold transition hover:bg-purple-700 text-center">View Reports</router-link>
           </div>
         </div>
       </div>
@@ -109,6 +120,12 @@
 <script setup>
 
 import { ref } from 'vue'
+import { 
+  BanknotesIcon, 
+  ArrowTrendingUpIcon, 
+  ArrowTrendingDownIcon,
+  PlusIcon 
+} from '@heroicons/vue/24/outline'
 
 const lineChartOptions = ref({
   xaxis: {

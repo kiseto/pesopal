@@ -26,8 +26,8 @@
               <li><router-link to="/dashboard/reports" class="block px-4 py-2 hover:bg-blue-50">Reports</router-link></li>
             </ul>
           </li>
-          <li><router-link to="/settings" class="hover:text-blue-600">Settings</router-link></li>
-          <li><router-link to="/"><button class="cursor-pointer text-red-600 font-semibold hover:underline">Logout</button></router-link></li>
+          <!--<li><router-link to="/settings" class="hover:text-blue-600">Settings</router-link></li>-->
+          <li><router-link to="/"><button class="cursor-pointer text-red-600 font-semibold hover:underline underline-offset-6 decoration-2">Logout</button></router-link></li>
         </ul>
       </div>
     </nav>

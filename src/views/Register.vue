@@ -1,8 +1,8 @@
 <template>
-    <div class="min-h-[calc(100vh-5.2rem)] bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-8 py-12">
+    <div class="min-h-[calc(100vh-5.2rem)] bg-gray-50 flex items-center justify-center px-8 py-12">
         <div class="max-w-3xl w-full flex flex-row items-center justify-center">
             <!-- Registration Form (Left) -->
-            <div class="bg-white rounded-2xl border-neutral-100 shadow-md border-1 p-8 w-full max-w-lg">
+            <div class="bg-white rounded-2xl border-neutral-200 border-1 p-8 w-full max-w-lg">
                 <div class="text-center mb-8">
                     <h1 class="text-4xl font-bold text-gray-900 mb-2">Create Account</h1>
                     <p class="text-lg text-gray-600">Join PesoPal today</p>

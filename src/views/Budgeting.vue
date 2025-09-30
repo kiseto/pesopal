@@ -11,23 +11,23 @@
     
       <!-- Summary Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <div class="bg-white rounded-2xl shadow p-8 flex flex-col">
+        <div class="bg-white rounded-2xl border-1 border-gray-200 p-8 flex flex-col">
           <div class="text-gray-500 text-md">Monthly Budget</div>
-          <div class="text-3xl font-bold text-gray-800">₱{{ summary.monthlyBudget.toLocaleString() }}</div>
+          <div class="text-3xl font-bold text-gray-900">₱{{ summary.monthlyBudget.toLocaleString() }}</div>
           <div class="text-md text-gray-500">₱{{ summary.spentThisMonth.toLocaleString() }} spent this month</div>
           <div class="w-full h-3 bg-gray-200 rounded mt-4">
             <div class="h-3 bg-blue-600 rounded" :style="{ width: summary.progress + '%' }"></div>
           </div>
         </div>
-        <div class="bg-white rounded-2xl shadow p-8 flex flex-col">
+        <div class="bg-white rounded-2xl border-1 border-gray-200 p-8 flex flex-col">
           <div class="text-gray-500 text-md">Savings Goal</div>
-          <div class="text-3xl font-bold text-gray-800">₱{{ summary.savingsGoal.toLocaleString() }}</div>
+          <div class="text-3xl font-bold text-gray-900">₱{{ summary.savingsGoal.toLocaleString() }}</div>
           <div class="text-md text-gray-500">₱{{ summary.savedSoFar.toLocaleString() }} saved so far</div>
           <div class="w-full h-3 bg-gray-200 rounded mt-4">
             <div class="h-3 bg-blue-500 rounded" :style="{ width: summary.savingsProgress + '%' }"></div>
           </div>
         </div>
-        <div class="bg-white rounded-2xl shadow p-8 flex flex-col">
+        <div class="bg-white rounded-2xl border-1 border-gray-200 p-8 flex flex-col">
           <div class="text-gray-500 text-md">Budget Status</div>
           <div :class="summary.remaining >= 0 ? 'text-green-600' : 'text-red-600'" class="text-3xl font-bold">{{ summary.status }}</div>
           <div class="text-md text-gray-500">₱{{ summary.remaining.toLocaleString() }} remaining</div>
@@ -86,7 +86,7 @@
       <!-- Add Category Modal -->
       <div v-if="showCategoryModal" class="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-[1px]">
         <div class="bg-white rounded-2xl shadow-lg w-full max-w-xl p-8 relative">
-          <button @click="closeCategoryModal" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600">&times;</button>
+          <button @click="closeCategoryModal" class="cursor-pointer absolute top-2 right-2 text-gray-400 hover:text-gray-600">&times;</button>
           <h2 class="text-xl font-bold mb-4">Add Budget Category</h2>
           <form @submit.prevent="submitCategory">
             <div class="mb-4">

@@ -12,10 +12,10 @@
           <!--Navbar links-->
           <nav class="flex flex-row justify-center items-center">
             <ul class="flex flex-row gap-x-12">
-              <li><router-link class="text-gray-700 cursor-pointer hover:text-neutral-900 ease-in-out duration-200 transition" to="/">Home</router-link></li>
-              <li><a class="text-gray-700 cursor-pointer hover:text-neutral-900 ease-in-out duration-200 transition" href="#features">Features</a></li>
-              <li><a class="text-gray-700 cursor-pointer hover:text-neutral-900 ease-in-out duration-200 transition" href="#about">About</a></li>
-              <li><a class="text-gray-700 cursor-pointer hover:text-neutral-900 ease-in-out duration-200 transition" href="#contact">Contact</a></li>
+              <li><router-link class="font-semibold text-gray-700 cursor-pointer hover:text-neutral-900 ease-in-out duration-200 transition" to="/">Home</router-link></li>
+              <li><a class="font-semibold text-gray-700 cursor-pointer hover:text-neutral-900 ease-in-out duration-200 transition" href="#features">Features</a></li>
+              <li><a class="font-semibold text-gray-700 cursor-pointer hover:text-neutral-900 ease-in-out duration-200 transition" href="#about">About</a></li>
+              <li><a class="font-semibold text-gray-700 cursor-pointer hover:text-neutral-900 ease-in-out duration-200 transition" href="#contact">Contact</a></li>
             </ul>
           </nav>
           <!--Login and Get Started buttons-->

@@ -2,8 +2,14 @@
     <!--Sections-->
     <main>
         <!-- Hero Section -->
-        <div class="bg-neutral-100 min-h-[calc(100vh-5.2rem)] flex items-center px-8">
-            <div class="max-w-6xl mx-auto grid grid-cols-2 gap-12 items-center">
+        <div class="relative bg-neutral-100 min-h-[calc(100vh-5.2rem)] flex items-center px-8 overflow-hidden">
+            <!-- Background Image with Opacity -->
+            <div 
+                class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+                :style="{ backgroundImage: `url(${white_wave_background})` }"
+            ></div>
+            <!-- Content Overlay -->
+            <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-2 gap-12 items-center">
                 <div>
                     <h1 class="text-6xl font-extrabold text-gray-900 mb-6">Welcome to <span class="text-blue-600">PesoPal</span></h1>
                     <p class="text-xl text-gray-600 mb-8 leading-relaxed">Your complete financial companion for managing money, tracking expenses, and making secure payments with confidence.</p>
@@ -26,23 +32,23 @@
                     <p class="text-xl text-gray-600">Everything you need to manage your finances effectively</p>
                 </div>
                 <div class="grid grid-cols-3 gap-8">
-                    <div class="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl border border-green-200">
-                        <div class="w-16 h-16 bg-gray-300 rounded-xl flex items-center justify-center mb-6">
-                            <span class="text-gray-500 text-sm">Icon</span>
+                    <div class="bg-white p-8 rounded-2xl border border-neutral-200">
+                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                            <ChartBarIcon class="h-8 w-8 text-blue-600" />
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Smart Tracking</h3>
                         <p class="text-gray-700 leading-relaxed">Automatically categorize and track your expenses with intelligent insights and detailed analytics.</p>
                     </div>
-                    <div class="bg-gradient-to-br from-blue-50 to-cyan-100 p-8 rounded-2xl border border-blue-200">
-                        <div class="w-16 h-16 bg-gray-300 rounded-xl flex items-center justify-center mb-6">
-                            <span class="text-gray-500 text-sm">Icon</span>
+                    <div class="bg-white p-8 rounded-2xl border border-neutral-200">
+                        <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                            <ShieldCheckIcon class="h-8 w-8 text-green-600" />
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Secure Payments</h3>
                         <p class="text-gray-700 leading-relaxed">Send and receive money with bank-level security and encryption protecting every transaction.</p>
                     </div>
-                    <div class="bg-gradient-to-br from-purple-50 to-violet-100 p-8 rounded-2xl border border-purple-200">
-                        <div class="w-16 h-16 bg-gray-300 rounded-xl flex items-center justify-center mb-6">
-                            <span class="text-gray-500 text-sm">Icon</span>
+                    <div class="bg-white p-8 rounded-2xl border border-neutral-200">
+                        <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                            <DocumentChartBarIcon class="h-8 w-8 text-purple-600" />
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Smart Reports</h3>
                         <p class="text-gray-700 leading-relaxed">Generate comprehensive financial reports with visual charts and actionable insights.</p>
@@ -52,8 +58,14 @@
         </div>
         
         <!-- About Section -->
-        <div id="about" class="bg-neutral-100 min-h-screen flex items-center px-8 py-16">
-            <div class="max-w-6xl mx-auto grid grid-cols-2 gap-12 items-center">
+        <div id="about" class="relative bg-neutral-100 min-h-screen flex items-center px-8 py-16 overflow-hidden">
+            <!-- Background Image with Opacity -->
+            <div 
+                class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-8"
+                :style="{ backgroundImage: `url(${white_wave_background})` }"
+            ></div>
+            <!-- Content Overlay -->
+            <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 class="text-5xl font-bold text-gray-900 mb-8">About PesoPal</h2>
                     <p class="text-xl text-gray-700 leading-relaxed mb-8">
@@ -80,8 +92,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-200 h-96 rounded-2xl flex items-center justify-center">
-                    <span class="text-gray-500 text-lg">About Image Placeholder</span>
+                <div class="h-[500px] rounded-2xl overflow-hidden">
+                    <img :src="man_looking_phone" alt="Man looking at phone" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -98,9 +110,9 @@
                     </div>
                     <p class="text-gray-400 text-sm mb-4">Simplifying financial management for everyone.</p>
                     <div class="flex gap-3">
-                        <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-blue-600"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm3 7v4h2v-4h2l-3-3-3 3h2z"/></svg></a>
-                        <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-blue-600"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><rect width="16" height="16" x="2" y="2" rx="4"/></svg></a>
-                        <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-blue-600"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/></svg></a>
+                        <a href="#" class=" p-2 rounded-lg hover:bg-blue-600"><img :src="facebook_icon" alt="Facebook" class="w-7 h-7 filter brightness-0 invert"></a>
+                        <a href="#" class=" p-2 rounded-lg hover:bg-blue-600"><img :src="github_icon" alt="GitHub" class="w-7 h-7 filter brightness-0 invert"></a>
+                        <a href="#" class=" p-2 rounded-lg hover:bg-blue-600"><img :src="instagram_icon" alt="Instagram" class="w-7 h-7 filter brightness-0 invert"></a>
                     </div>
                 </div>
                 <!-- Links -->
@@ -143,7 +155,18 @@
 </template>
 
 <script setup>
+import white_wave_background from '/src/assets/images/white_wave_background.jpg'
+import man_looking_phone from '/src/assets/images/man_looking_phone.jpg'
 import pesopal_logo from '/src/assets/images/pesopal_logo.svg'
+import facebook_icon from '/src/assets/images/facebook_icon.png'
+import github_icon from '/src/assets/images/github_icon.png'
+import instagram_icon from '/src/assets/images/instagram_icon.png'
+
+import { 
+  ChartBarIcon, 
+  ShieldCheckIcon, 
+  DocumentChartBarIcon 
+} from '@heroicons/vue/24/outline'
 </script>
 
 <style scoped>

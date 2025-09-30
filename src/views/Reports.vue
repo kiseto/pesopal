@@ -8,12 +8,12 @@
           <div class="text-lg text-gray-500">Analyze your spending patterns and financial trends</div>
         </div>
         <div class="flex gap-4 items-center">
-          <select v-model="selectedRange" class="border border-gray-300 rounded px-6 py-2">
+          <select v-model="selectedRange" class="cursor-pointer text-gray-900  border border-gray-300 rounded px-6 py-2">
             <option value="30">Last 30 days</option>
             <option value="90">Last 90 days</option>
             <option value="365">Last year</option>
           </select>
-          <button class="bg-green-600 text-white px-4 py-2 rounded font-semibold hover:bg-green-700 transition">Export Report</button>
+          <button class="cursor-pointer bg-green-600 text-white px-4 py-2 rounded font-semibold hover:bg-green-700 transition">Export Report</button>
         </div>
       </div>
       <!-- Summary Cards -->
@@ -43,12 +43,12 @@
       <!-- Charts Row -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         <div class="bg-white rounded-2xl border-neutral-200 border-1 p-6 h-120 flex flex-col justify-center">
-          <h1 class="font-bold text-xl pt-4">Spending by Category</h1>
+          <h1 class="text-gray-900 font-bold text-xl pt-4">Spending by Category</h1>
           <ApexChart type="donut" width="100%" height="100%" :options="donutChartOptions" :series="donutChartSeries" />
         </div>
 
         <div class="bg-white rounded-2xl border-neutral-200 border-1 p-6 h-120 flex flex-col justify-center">
-          <h1 class="font-bold text-xl pt-4">Monthly Spending Trends</h1>
+          <h1 class="text-gray-900 font-bold text-xl pt-4">Monthly Spending Trends</h1>
           <ApexChart type="line" width="100%" height="100%" :options="lineChartOptions" :series="lineChartSeries" />
         </div>
       </div>
@@ -64,7 +64,7 @@
               <span class="text-md">{{ cat.title }}</span>
             </div>
             <div class="text-right">
-              <span class="font-bold text-lg">₱{{ cat.amount.toLocaleString() }}</span>
+              <span class="text-gray-900 font-bold text-lg">₱{{ cat.amount.toLocaleString() }}</span>
               <span class="text-base text-gray-500 ml-2">{{ cat.percent }}%</span>
             </div>
           </div>
@@ -73,9 +73,9 @@
         <div class="bg-white rounded-2xl border-neutral-200 border-1 p-8">
           <div class="text-xl font-semibold text-gray-800 mb-6">Export Reports</div>
           <div class="flex flex-col gap-4 mb-6">
-            <button class="cursor-pointer bg-green-600 text-white px-6 py-3 rounded font-semibold hover:bg-green-700 flex items-center gap-3"><span>Download PDF Report</span></button>
+            <button class="cursor-pointer bg-red-600 text-white px-6 py-3 rounded font-semibold hover:bg-red-700 flex items-center gap-3"><span>Download PDF Report</span></button>
             <button class="cursor-pointer bg-blue-600 text-white px-6 py-3 rounded  font-semibold hover:bg-blue-700 flex items-center gap-3"><span>Export to CSV</span></button>
-            <button class="cursor-pointer bg-gray-700 text-white px-6 py-3 rounded  font-semibold hover:bg-gray-800 flex items-center gap-3"><span>Export to Excel</span></button>
+            <button class="cursor-pointer bg-green-600 text-white px-6 py-3 rounded  font-semibold hover:bg-green-700 flex items-center gap-3"><span>Export to Excel</span></button>
             
           </div>
           
