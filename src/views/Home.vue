@@ -2,7 +2,7 @@
     <!--Sections-->
     <main>
         <!-- Hero Section -->
-        <div class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-[calc(100vh-5.2rem)] flex items-center px-8">
+        <div class="bg-neutral-100 min-h-[calc(100vh-5.2rem)] flex items-center px-8">
             <div class="max-w-6xl mx-auto grid grid-cols-2 gap-12 items-center">
                 <div>
                     <h1 class="text-6xl font-extrabold text-gray-900 mb-6">Welcome to <span class="text-blue-600">PesoPal</span></h1>
@@ -12,8 +12,8 @@
                         <button class="border-2 border-blue-600 text-blue-600 cursor-pointer transition ease-in-out duration-200 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg">Learn More</button>
                     </div>
                 </div>
-                <div class="bg-gray-200 h-96 rounded-2xl flex items-center justify-center">
-                    <span class="text-gray-500 text-lg">Hero Image Placeholder</span>
+                <div class="h-96 rounded-2xl flex items-center justify-center">
+                    <img :src="pesopal_logo" alt="PesoPal Logo">
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
         </div>
         
         <!-- About Section -->
-        <div id="about" class="bg-white min-h-screen flex items-center px-8 py-16">
+        <div id="about" class="bg-neutral-100 min-h-screen flex items-center px-8 py-16">
             <div class="max-w-6xl mx-auto grid grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 class="text-5xl font-bold text-gray-900 mb-8">About PesoPal</h2>
@@ -93,12 +93,10 @@
                 <!-- Logo and description -->
                 <div class="mb-8 md:mb-0 md:w-1/4">
                     <div class="flex items-center gap-3 mb-3">
-                        <div class="bg-blue-600 rounded-lg p-2">
-                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/></svg>
-                        </div>
-                        <span class="font-bold text-xl">Pesopal</span>
+                        <img :src="pesopal_logo" alt="PesoPal Logo" class="w-8 h-8">
+                        <span class="font-extrabold text-xl">PesoPal</span>
                     </div>
-                    <p class="text-gray-400 text-sm mb-4">Simplifying financial management for businesses worldwide.</p>
+                    <p class="text-gray-400 text-sm mb-4">Simplifying financial management for everyone.</p>
                     <div class="flex gap-3">
                         <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-blue-600"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm3 7v4h2v-4h2l-3-3-3 3h2z"/></svg></a>
                         <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-blue-600"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><rect width="16" height="16" x="2" y="2" rx="4"/></svg></a>
@@ -145,7 +143,7 @@
 </template>
 
 <script setup>
-// Home page logic
+import pesopal_logo from '/src/assets/images/pesopal_logo.svg'
 </script>
 
 <style scoped>

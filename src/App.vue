@@ -5,8 +5,8 @@
       <div class="bg-white p-4 border-b-neutral-100 border-b-1">
         <div class="container mx-auto flex flex-row items-center justify-between">
           <!--Logo-->
-          <div class="flex flex-row">
-            <img src="" alt="">
+          <div class="flex flex-row gap-2">
+            <img v-bind:src="pesopal_logo" alt="PesoPal Logo" class="max-w-10">
             <router-link class="font-extrabold cursor-pointer text-self-blue text-4xl" to="/">PesoPal</router-link>
           </div>
           <!--Navbar links-->
@@ -41,6 +41,9 @@
 </template>
 
 <script setup>
+import pesopal_logo from '/src/assets/images/pesopal_logo.svg'
+
 import { useRoute } from 'vue-router'
 const route = useRoute()
+
 </script>

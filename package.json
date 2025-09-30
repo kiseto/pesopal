@@ -13,9 +13,12 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
+    "apexcharts": "^5.3.5",
     "tailwindcss": "^4.1.13",
     "vue": "^3.5.18",
-    "vue-router": "^4.5.1"
+    "vue-good-table-next": "^0.2.2",
+    "vue-router": "^4.5.1",
+    "vue3-apexcharts": "^1.8.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
