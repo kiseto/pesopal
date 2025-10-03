@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Budget Update</title>
+</head>
+<body>
+    <h1>Test Budget Category Update</h1>
+    <button onclick="testUpdate()">Test Update Spent Amount</button>
+    <div id="result"></div>
+    
+    <script>
+    async function testUpdate() {
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = 'Testing...';
+        
+        try {
+            // Test with sample data
+            const response = await fetch('http://localhost/pesopal/src/api/budget/categories/update-spent.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                credentials: 'include',
+                body: JSON.stringify({
+                    id: 1,  // Test with budget category ID 1
+                    amount: 5.00  // Test amount
+                })
+            });
+            
+            const result = await response.json();
+            resultDiv.innerHTML = '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
+            
+        } catch (error) {
+            resultDiv.innerHTML = 'Error: ' + error.message;
+        }
+    }
+    </script>
+</body>
+</html>

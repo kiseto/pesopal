@@ -27,7 +27,7 @@
             </ul>
           </li>
           <!--<li><router-link to="/settings" class="hover:text-blue-600">Settings</router-link></li>-->
-          <li><router-link to="/"><button class="cursor-pointer text-red-600 font-semibold hover:underline underline-offset-6 decoration-2">Logout</button></router-link></li>
+          <li><button @click="handleLogout" class="cursor-pointer text-red-600 font-semibold hover:underline underline-offset-6 decoration-2">Logout</button></li>
         </ul>
       </div>
     </nav>
@@ -37,7 +37,29 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
 import pesopal_logo from '/src/assets/images/pesopal_logo.svg'
+import ApiService from '../services/ApiService.js'
+
+const router = useRouter()
+
+const handleLogout = async () => {
+  try {
+    // Call logout API
+    await ApiService.logout()
+    
+    // Clear local storage
+    localStorage.removeItem('user')
+    
+    // Redirect to home
+    router.push('/')
+  } catch (error) {
+    console.error('Logout error:', error)
+    // Even if logout API fails, redirect to home
+    localStorage.removeItem('user')
+    router.push('/')
+  }
+}
 </script>
 
 <style scoped>

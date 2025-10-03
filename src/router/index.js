@@ -8,6 +8,7 @@ import Transactions from '../views/Transactions.vue'
 import Invoices from '../views/Invoices.vue'
 import Budgeting from '../views/Budgeting.vue'
 import Reports from '../views/Reports.vue'
+import TestAPI from '../views/TestAPI.vue'
 
 
 const router = createRouter({
@@ -27,6 +28,11 @@ const router = createRouter({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/test-api',
+      name: 'TestAPI',
+      component: TestAPI
     },
     {
       path: '/dashboard',
